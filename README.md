@@ -5,6 +5,15 @@ A collection of yara rules that can be used for forensics (non malware) cases
 
 `Yara` is the pattern matching swiss knife for malware researchers (and everyone else). Basically `Yara` allow us to scan files based on textual or binary patterns, thus we can take advantage of `Yara`'s potential and focus it in forensic investigations.
 
+# Reason
+
+If you start analysing a forensic image, a fast way to detect certain files like password safes is by using yara.
+It can also be used to hunt on file repositories for interesting files.
+
+# Malware
+
+This repo is not meant to cover yara rules in regard to malware / rootkits / threat actors.
+
 # Other projects
 
 * https://github.com/Xumeiquer/yara-forensics focuses only on detecting magic bytes
