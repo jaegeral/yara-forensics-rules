@@ -22,3 +22,18 @@ rule pcap_file
     condition:
        $a at 0 or $b at 0 or $c at 0 or $d at 0
 }
+
+rule cap_file
+{
+	 meta:
+        author = "Alexander Jaeger"
+        desc = "CAP	Cinco NetXRay, Network General Sniffer, and Network Associates Sniffer capture file"
+        license = "https://creativecommons.org/licenses/by-nc/4.0/"
+        version = "v0.1"
+        weigth = 80
+        reference = "https://wangrui.wordpress.com/2007/06/19/file-signatures-table/"
+    strings:
+        $a = { 58 43 50 00 }
+    condition:
+       $a at 0
+}
