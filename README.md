@@ -17,3 +17,4 @@ This repo is not meant to cover yara rules in regard to malware / rootkits / thr
 # Other projects
 
 * https://github.com/Xumeiquer/yara-forensics focuses only on detecting magic bytes
+* https://asecuritysite.com/forensics/magic good list of magic bytes
