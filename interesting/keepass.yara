@@ -5,11 +5,12 @@
    Identifier: Keepass
 */
 
-rule Keepass_csv_file
+rule Keepass_xml_file
 {
 	 meta:
         author = "Alexander Jaeger"
-        desc = "Keepass CSV File"
+        desc = "Keepass File Format: CSV (KeePass 1.x)"
+        license = "https://creativecommons.org/licenses/by-nc/4.0/"
         version = "v0.1"
         weigth = 80 
         reference = "https://keepass.info/help/base/importexport.html#csv"
@@ -23,3 +24,25 @@ rule Keepass_csv_file
     condition:
         all of them
 }
+
+
+rule Keepass_csv_file
+{
+	 meta:
+        author = "Alexander Jaeger"
+        desc = "Keepass File Format: XML (KeePass 1.x)"
+        license = "https://creativecommons.org/licenses/by-nc/4.0/"
+        version = "v0.1"
+        weigth = 80
+        reference = "https://keepass.info/help/base/importexport.html#xml"
+    strings:
+        $a = "Account" fullword ascii
+        $b = "Login Name" fullword ascii
+        $c = "Password" fullword ascii
+        $d = "Web Site" fullword ascii
+        $e = "Comments" fullword ascii
+    condition:
+        all of them
+}
+
+
