@@ -34,3 +34,20 @@ rule access_data_ftk_evidence
     condition:
        $a at 0
 }
+
+rule evf_file
+{
+	 meta:
+        author = "Alexander Jaeger"
+        desc = "Expert Witness Compression Format"
+        license = "https://creativecommons.org/licenses/by-nc/4.0/"
+        version = "v0.1"
+        weigth = 80
+        reference = "https://filesignatures.net/index.php?page=search&search=455646090D0AFF00&mode=SIG"
+    strings:
+        $a = { 45 56 46 09 0D 0A FF 00 }
+    condition:
+       $a at 0
+}
+
+
