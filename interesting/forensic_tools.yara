@@ -19,3 +19,18 @@ rule encase_file
     condition:
        $a at 0
 }
+
+rule access_data_ftk_evidence
+{
+	 meta:
+        author = "Alexander Jaeger"
+        desc = "Access Data FTK evidence"
+        license = "https://creativecommons.org/licenses/by-nc/4.0/"
+        version = "v0.1"
+        weigth = 80
+        reference = "https://filesignatures.net/index.php?page=search&search=A90D000000000000&mode=SIG"
+    strings:
+        $a = { A9 0D 00 00 00 00 00 00 }
+    condition:
+       $a at 0
+}
