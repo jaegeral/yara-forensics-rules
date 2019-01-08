@@ -37,3 +37,20 @@ rule OnePassword_1Password_file
     condition:
         all of them
 }
+
+rule OnePassword_cloud_keychain_encrypted_attachment
+{
+	 meta:
+        author = "Alexander Jaeger"
+        desc = "1Password 4 Cloud Keychain encrypted attachment"
+        license = "https://creativecommons.org/licenses/by-nc/4.0/"
+        source = "https://www.garykessler.net/library/file_sigs.html"
+        version = "v0.1"
+        weigth = 80
+    strings:
+        $a = { 4F 50 43 4C 44 41 54 }
+    condition:
+        $a at 0
+}
+
+
