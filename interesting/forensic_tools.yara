@@ -50,4 +50,20 @@ rule evf_file
        $a at 0
 }
 
+rule lvf_file
+{
+	 meta:
+        author = "Alexander Jaeger"
+        desc = "Logical File Evidence Format"
+        license = "https://creativecommons.org/licenses/by-nc/4.0/"
+        version = "v0.1"
+        weigth = 80
+        reference = "https://filesignatures.net/index.php?page=search&search=4C5646090D0AFF00&mode=SIG"
+    strings:
+        $a = { 4C 56 46 09 0D 0A FF 00 }
+    condition:
+       $a at 0
+}
+
+
 
