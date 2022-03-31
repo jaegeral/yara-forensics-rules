@@ -14,6 +14,13 @@ It can also be used to hunt on file repositories for interesting files.
 
 This repo is not meant to cover yara rules in regard to malware / rootkits / threat actors.
 
+# Using
+
+```
+sudo apt-get install yara
+git clone https://github.com/jaegeral/yara-forensics-rules
+```
+
 # Other projects
 
 * https://github.com/Xumeiquer/yara-forensics focuses only on detecting magic bytes
